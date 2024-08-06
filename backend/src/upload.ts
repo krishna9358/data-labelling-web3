@@ -1,13 +1,14 @@
 import { v2 as cloudinary } from 'cloudinary';
+require('dotenv').config();
 
 export default function upload() { (async function() {
-
     // Configuration
     cloudinary.config({ 
-        // cloud_name: 'saas-data-labelling-web3', 
-        // api_key: '684497491646695', 
-        // api_secret: 'Vo-KWXprMdqe_O6X1gmSH_1Giqc' 
+        cloud_name: process.env.cloudnary_cloud_name, 
+        api_key: process.env.cloudnary_api_key, 
+        api_secret: process.env.cloudnary_api_secret 
     });
+    
     
     // Upload an image
      const uploadResult = await cloudinary.uploader

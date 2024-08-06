@@ -11,14 +11,15 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = upload;
 const cloudinary_1 = require("cloudinary");
+require('dotenv').config();
 function upload() {
     (function () {
         return __awaiter(this, void 0, void 0, function* () {
             // Configuration
             cloudinary_1.v2.config({
-                cloud_name: 'saas-data-labelling-web3',
-                api_key: '684497491646695',
-                api_secret: 'Vo-KWXprMdqe_O6X1gmSH_1Giqc'
+                cloud_name: process.env.cloudnary_cloud_name,
+                api_key: process.env.cloudnary_api_key,
+                api_secret: process.env.cloudnary_api_secret
             });
             // Upload an image
             const uploadResult = yield cloudinary_1.v2.uploader
