@@ -4,9 +4,9 @@ export default function upload() { (async function() {
 
     // Configuration
     cloudinary.config({ 
-        cloud_name: 'saas-data-labelling-web3', 
-        api_key: '684497491646695', 
-        api_secret: 'Vo-KWXprMdqe_O6X1gmSH_1Giqc' 
+        // cloud_name: 'saas-data-labelling-web3', 
+        // api_key: '684497491646695', 
+        // api_secret: 'Vo-KWXprMdqe_O6X1gmSH_1Giqc' 
     });
     
     // Upload an image
